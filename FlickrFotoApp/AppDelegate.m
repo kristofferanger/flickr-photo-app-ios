@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "MenuViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,18 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    MenuViewController *menu = [[MenuViewController alloc]initWithNibName:nil bundle:nil];
+    
+    // add to navcontroller
+    UINavigationController *navigationController = [[UINavigationController alloc]initWithRootViewController:menu];
+    navigationController.navigationBarHidden = YES;
+
+    // add to window
+    self.window = [UIWindow new];
+    self.window.rootViewController = navigationController;
+    [self.window makeKeyAndVisible];
+        
     return YES;
 }
 

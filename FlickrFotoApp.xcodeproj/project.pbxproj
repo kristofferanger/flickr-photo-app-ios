@@ -7,25 +7,66 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84077A32222991A800E8192C /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84077A31222991A800E8192C /* MenuViewController.m */; };
+		84077A352229936000E8192C /* UIView+AutoLayoutSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 84077A342229936000E8192C /* UIView+AutoLayoutSupport.m */; };
+		848C557C222F2626000216FF /* PhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 848C557B222F2626000216FF /* PhotoCollectionViewCell.m */; };
+		84A86FE8222BDE50008762EA /* UIColor+ThemeColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A86FE7222BDE50008762EA /* UIColor+ThemeColors.m */; };
+		84A86FEB222BEAD4008762EA /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A86FEA222BEAD4008762EA /* ListViewController.m */; };
+		84A86FEE222C2E1C008762EA /* UIView+Elevation.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A86FEC222C2E1C008762EA /* UIView+Elevation.m */; };
+		84A8701F222DA213008762EA /* URLImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A8701E222DA213008762EA /* URLImage.m */; };
 		84D2D388222052FB004FB21B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D2D387222052FB004FB21B /* AppDelegate.m */; };
-		84D2D38B222052FB004FB21B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D2D38A222052FB004FB21B /* ViewController.m */; };
-		84D2D38E222052FB004FB21B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84D2D38C222052FB004FB21B /* Main.storyboard */; };
 		84D2D390222052FC004FB21B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84D2D38F222052FC004FB21B /* Assets.xcassets */; };
 		84D2D393222052FC004FB21B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84D2D391222052FC004FB21B /* LaunchScreen.storyboard */; };
 		84D2D396222052FC004FB21B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D2D395222052FC004FB21B /* main.m */; };
+		84D2D39E22205342004FB21B /* APIHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D2D39D22205341004FB21B /* APIHelpers.m */; };
+		84D7FC48222E84EB00E37CA4 /* PhotoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D7FC47222E84EB00E37CA4 /* PhotoTableViewCell.m */; };
+		84D7FC4E222EC10300E37CA4 /* GridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D7FC4D222EC10300E37CA4 /* GridViewController.m */; };
+		84D7FC57222EDE0600E37CA4 /* PhotoDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D7FC56222EDE0600E37CA4 /* PhotoDetailsViewController.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		84077A23222984A600E8192C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		84077A30222991A800E8192C /* MenuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		84077A31222991A800E8192C /* MenuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		84077A332229936000E8192C /* UIView+AutoLayoutSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AutoLayoutSupport.h"; sourceTree = "<group>"; };
+		84077A342229936000E8192C /* UIView+AutoLayoutSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AutoLayoutSupport.m"; sourceTree = "<group>"; };
+		848C557A222F2626000216FF /* PhotoCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoCollectionViewCell.h; sourceTree = "<group>"; };
+		848C557B222F2626000216FF /* PhotoCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoCollectionViewCell.m; sourceTree = "<group>"; };
+		84A86FE6222BDE50008762EA /* UIColor+ThemeColors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+ThemeColors.h"; sourceTree = "<group>"; };
+		84A86FE7222BDE50008762EA /* UIColor+ThemeColors.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ThemeColors.m"; sourceTree = "<group>"; };
+		84A86FE9222BEAD4008762EA /* ListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
+		84A86FEA222BEAD4008762EA /* ListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
+		84A86FEC222C2E1C008762EA /* UIView+Elevation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Elevation.m"; sourceTree = "<group>"; };
+		84A86FED222C2E1C008762EA /* UIView+Elevation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Elevation.h"; sourceTree = "<group>"; };
+		84A8701D222DA213008762EA /* URLImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URLImage.h; sourceTree = "<group>"; };
+		84A8701E222DA213008762EA /* URLImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URLImage.m; sourceTree = "<group>"; };
 		84D2D383222052FB004FB21B /* FlickrFotoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlickrFotoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84D2D386222052FB004FB21B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		84D2D387222052FB004FB21B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		84D2D389222052FB004FB21B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		84D2D38A222052FB004FB21B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		84D2D38D222052FB004FB21B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		84D2D38F222052FC004FB21B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84D2D392222052FC004FB21B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84D2D394222052FC004FB21B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84D2D395222052FC004FB21B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		84D2D39C22205341004FB21B /* APIHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIHelpers.h; sourceTree = "<group>"; };
+		84D2D39D22205341004FB21B /* APIHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIHelpers.m; sourceTree = "<group>"; };
+		84D7FC46222E84EB00E37CA4 /* PhotoTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoTableViewCell.h; sourceTree = "<group>"; };
+		84D7FC47222E84EB00E37CA4 /* PhotoTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoTableViewCell.m; sourceTree = "<group>"; };
+		84D7FC4C222EC10300E37CA4 /* GridViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GridViewController.h; sourceTree = "<group>"; };
+		84D7FC4D222EC10300E37CA4 /* GridViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GridViewController.m; sourceTree = "<group>"; };
+		84D7FC55222EDE0600E37CA4 /* PhotoDetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoDetailsViewController.h; sourceTree = "<group>"; };
+		84D7FC56222EDE0600E37CA4 /* PhotoDetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoDetailsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,11 +80,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		84077A1D2229844E00E8192C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		84D2D37A222052FB004FB21B = {
 			isa = PBXGroup;
 			children = (
 				84D2D385222052FB004FB21B /* FlickrFotoApp */,
 				84D2D384222052FB004FB21B /* Products */,
+				84077A1D2229844E00E8192C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,9 +109,28 @@
 			children = (
 				84D2D386222052FB004FB21B /* AppDelegate.h */,
 				84D2D387222052FB004FB21B /* AppDelegate.m */,
-				84D2D389222052FB004FB21B /* ViewController.h */,
-				84D2D38A222052FB004FB21B /* ViewController.m */,
-				84D2D38C222052FB004FB21B /* Main.storyboard */,
+				84077A30222991A800E8192C /* MenuViewController.h */,
+				84077A31222991A800E8192C /* MenuViewController.m */,
+				84D7FC4C222EC10300E37CA4 /* GridViewController.h */,
+				84D7FC4D222EC10300E37CA4 /* GridViewController.m */,
+				84A86FE9222BEAD4008762EA /* ListViewController.h */,
+				84A86FEA222BEAD4008762EA /* ListViewController.m */,
+				84D7FC55222EDE0600E37CA4 /* PhotoDetailsViewController.h */,
+				84D7FC56222EDE0600E37CA4 /* PhotoDetailsViewController.m */,
+				84D7FC46222E84EB00E37CA4 /* PhotoTableViewCell.h */,
+				84D7FC47222E84EB00E37CA4 /* PhotoTableViewCell.m */,
+				848C557A222F2626000216FF /* PhotoCollectionViewCell.h */,
+				848C557B222F2626000216FF /* PhotoCollectionViewCell.m */,
+				84D2D39C22205341004FB21B /* APIHelpers.h */,
+				84D2D39D22205341004FB21B /* APIHelpers.m */,
+				84A86FE6222BDE50008762EA /* UIColor+ThemeColors.h */,
+				84A86FE7222BDE50008762EA /* UIColor+ThemeColors.m */,
+				84077A332229936000E8192C /* UIView+AutoLayoutSupport.h */,
+				84077A342229936000E8192C /* UIView+AutoLayoutSupport.m */,
+				84A86FED222C2E1C008762EA /* UIView+Elevation.h */,
+				84A86FEC222C2E1C008762EA /* UIView+Elevation.m */,
+				84A8701D222DA213008762EA /* URLImage.h */,
+				84A8701E222DA213008762EA /* URLImage.m */,
 				84D2D38F222052FC004FB21B /* Assets.xcassets */,
 				84D2D391222052FC004FB21B /* LaunchScreen.storyboard */,
 				84D2D394222052FC004FB21B /* Info.plist */,
@@ -81,6 +149,7 @@
 				84D2D37F222052FB004FB21B /* Sources */,
 				84D2D380222052FB004FB21B /* Frameworks */,
 				84D2D381222052FB004FB21B /* Resources */,
+				84077A23222984A600E8192C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,7 +199,6 @@
 			files = (
 				84D2D393222052FC004FB21B /* LaunchScreen.storyboard in Resources */,
 				84D2D390222052FC004FB21B /* Assets.xcassets in Resources */,
-				84D2D38E222052FB004FB21B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,23 +209,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84D2D38B222052FB004FB21B /* ViewController.m in Sources */,
+				84D7FC48222E84EB00E37CA4 /* PhotoTableViewCell.m in Sources */,
+				848C557C222F2626000216FF /* PhotoCollectionViewCell.m in Sources */,
+				84D2D39E22205342004FB21B /* APIHelpers.m in Sources */,
+				84D7FC57222EDE0600E37CA4 /* PhotoDetailsViewController.m in Sources */,
+				84A86FEE222C2E1C008762EA /* UIView+Elevation.m in Sources */,
+				84077A352229936000E8192C /* UIView+AutoLayoutSupport.m in Sources */,
+				84A8701F222DA213008762EA /* URLImage.m in Sources */,
+				84A86FEB222BEAD4008762EA /* ListViewController.m in Sources */,
 				84D2D396222052FC004FB21B /* main.m in Sources */,
 				84D2D388222052FB004FB21B /* AppDelegate.m in Sources */,
+				84A86FE8222BDE50008762EA /* UIColor+ThemeColors.m in Sources */,
+				84D7FC4E222EC10300E37CA4 /* GridViewController.m in Sources */,
+				84077A32222991A800E8192C /* MenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		84D2D38C222052FB004FB21B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				84D2D38D222052FB004FB21B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		84D2D391222052FC004FB21B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -287,7 +357,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LT68BJ94W7;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = FlickrFotoApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,7 +379,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LT68BJ94W7;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = FlickrFotoApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
