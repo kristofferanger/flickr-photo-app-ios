@@ -15,17 +15,6 @@
 
 @implementation PhotoTableViewCell
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    // Initialization code
-}
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
-}
-
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier  {
     
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
@@ -63,7 +52,7 @@
     [self.photoView.heightAnchor constraintEqualToConstant:DEFAULT_IMAGE_HEIGHT].active = YES;
     [self.photoView setContentHuggingPriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisVertical];
     [self.photoView setContentCompressionResistancePriority:UILayoutPriorityDefaultLow forAxis:UILayoutConstraintAxisVertical];
-    
+
     UIStackView *containerStackView = [[UIStackView alloc]initWithArrangedSubviews:@[self.photoView, textContainerView]];
     containerStackView.axis = UILayoutConstraintAxisVertical;
     containerStackView.alignment = UIStackViewAlignmentFill;

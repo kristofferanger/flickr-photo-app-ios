@@ -10,7 +10,18 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class MenuViewController;
+@protocol MenuViewControllerDelegate <NSObject>
+
+- (void)menuViewController:(MenuViewController *)menu dismissedWithSelectedInfo:(nullable NSDictionary *)info;
+
+@end
+
 @interface MenuViewController : UIViewController
+
+@property (nonatomic, weak) id <MenuViewControllerDelegate> delegate;
+
+- (instancetype)initWithButtonInfoArray:(NSArray *)buttons;
 
 @end
 

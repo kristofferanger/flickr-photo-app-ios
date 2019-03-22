@@ -30,14 +30,14 @@
 - (void)pinToXPosition:(LayoutPosition)xPosition withDistance:(CGFloat)xSpace pinToYPosition:(LayoutPosition)yPosition withDistance:(CGFloat)ySpace {
 
     // add horizontal constraints
-    [self pinToPosition:xPosition inDimension:LayoutDimensionHorizontal withDistance:xSpace];
+    [self pinToPosition:xPosition inDimension:LayoutDimensionHorizontal withLeadingDistance:xSpace trailingDistance:xSpace];
 
     // add vertical constraints
-    [self pinToPosition:yPosition inDimension:LayoutDimensionVertical withDistance:ySpace];
+    [self pinToPosition:yPosition inDimension:LayoutDimensionVertical withLeadingDistance:ySpace trailingDistance:ySpace];
 }
 
 
-- (void)pinToPosition:(LayoutPosition)layoutPosition inDimension:(LayoutDimension)layoutDimension withDistance:(CGFloat)strut {
+- (void)pinToPosition:(LayoutPosition)layoutPosition inDimension:(LayoutDimension)layoutDimension withLeadingDistance:(CGFloat)leading trailingDistance:(CGFloat)trailing {
     
     // enable constraint changes
     self.translatesAutoresizingMaskIntoConstraints = NO;
@@ -47,6 +47,7 @@
     NSString *visualFormat = nil;
     
     if (layoutDimension == LayoutDimensionHorizontal) {
+        
         // horisontal aspect and spring - calculate from width values
         aspectValue = MAX(self.bounds.size.width, self.intrinsicContentSize.width);
         superAspectValue = MAX(self.superview.bounds.size.width, self.superview.intrinsicContentSize.width);
@@ -68,21 +69,22 @@
             break;
         case LayoutPositionTop:
         case LayoutPositionLeft:
-            visualFormat = [visualFormat stringByAppendingString:@"|-strut@highPriority-[view(>=aspectValue)]"];
+            visualFormat = [visualFormat stringByAppendingString:@"|-leading@highPriority-[view(>=aspectValue)]"];
             break;
         case LayoutPositionBottom:
         case LayoutPositionRight:
-            visualFormat = [visualFormat stringByAppendingString:@"[view(>=aspectValue)]-strut@highPriority-|"];
+            visualFormat = [visualFormat stringByAppendingString:@"[view(>=aspectValue)]-trailing@highPriority-|"];
             break;
         case LayoutPositionEdgeToEdge:
-            visualFormat = [visualFormat stringByAppendingString:@"|-strut@highestPriority-[view(>=aspectValue)]-strut@highPriority-|"];
+            visualFormat = [visualFormat stringByAppendingString:@"|-leading@highestPriority-[view(>=aspectValue)]-trailing@highPriority-|"];
             break;
     }
     
     // set parameters
     NSDictionary *views = [NSDictionary dictionaryWithObjectsAndKeys:self, @"view", nil];
     NSDictionary *metrics = @{@"aspectValue": [NSNumber numberWithFloat:aspectValue],
-                              @"strut": [NSNumber numberWithFloat:strut],
+                              @"leading": [NSNumber numberWithFloat:leading],
+                              @"trailing": [NSNumber numberWithFloat:trailing],
                               @"spring": [NSNumber numberWithFloat:spring],
                               @"highPriority": [NSNumber numberWithInteger:HIGH_PRIORITY],
                               @"highestPriority": [NSNumber numberWithInteger:HIGH_PRIORITY+1]

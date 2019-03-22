@@ -11,7 +11,7 @@
 		84077A352229936000E8192C /* UIView+AutoLayoutSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 84077A342229936000E8192C /* UIView+AutoLayoutSupport.m */; };
 		848C557C222F2626000216FF /* PhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 848C557B222F2626000216FF /* PhotoCollectionViewCell.m */; };
 		84A86FE8222BDE50008762EA /* UIColor+ThemeColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A86FE7222BDE50008762EA /* UIColor+ThemeColors.m */; };
-		84A86FEB222BEAD4008762EA /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A86FEA222BEAD4008762EA /* ListViewController.m */; };
+		84A86FEB222BEAD4008762EA /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A86FEA222BEAD4008762EA /* RootViewController.m */; };
 		84A86FEE222C2E1C008762EA /* UIView+Elevation.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A86FEC222C2E1C008762EA /* UIView+Elevation.m */; };
 		84A8701F222DA213008762EA /* URLImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A8701E222DA213008762EA /* URLImage.m */; };
 		84D2D388222052FB004FB21B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D2D387222052FB004FB21B /* AppDelegate.m */; };
@@ -20,8 +20,8 @@
 		84D2D396222052FC004FB21B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D2D395222052FC004FB21B /* main.m */; };
 		84D2D39E22205342004FB21B /* APIHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D2D39D22205341004FB21B /* APIHelpers.m */; };
 		84D7FC48222E84EB00E37CA4 /* PhotoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D7FC47222E84EB00E37CA4 /* PhotoTableViewCell.m */; };
-		84D7FC4E222EC10300E37CA4 /* GridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D7FC4D222EC10300E37CA4 /* GridViewController.m */; };
 		84D7FC57222EDE0600E37CA4 /* PhotoDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D7FC56222EDE0600E37CA4 /* PhotoDetailsViewController.m */; };
+		84E0F18F224535B100163780 /* SwipeInteractionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E0F18E224535B100163780 /* SwipeInteractionController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -46,8 +46,8 @@
 		848C557B222F2626000216FF /* PhotoCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoCollectionViewCell.m; sourceTree = "<group>"; };
 		84A86FE6222BDE50008762EA /* UIColor+ThemeColors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+ThemeColors.h"; sourceTree = "<group>"; };
 		84A86FE7222BDE50008762EA /* UIColor+ThemeColors.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ThemeColors.m"; sourceTree = "<group>"; };
-		84A86FE9222BEAD4008762EA /* ListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
-		84A86FEA222BEAD4008762EA /* ListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
+		84A86FE9222BEAD4008762EA /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		84A86FEA222BEAD4008762EA /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		84A86FEC222C2E1C008762EA /* UIView+Elevation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Elevation.m"; sourceTree = "<group>"; };
 		84A86FED222C2E1C008762EA /* UIView+Elevation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Elevation.h"; sourceTree = "<group>"; };
 		84A8701D222DA213008762EA /* URLImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URLImage.h; sourceTree = "<group>"; };
@@ -63,10 +63,10 @@
 		84D2D39D22205341004FB21B /* APIHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIHelpers.m; sourceTree = "<group>"; };
 		84D7FC46222E84EB00E37CA4 /* PhotoTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoTableViewCell.h; sourceTree = "<group>"; };
 		84D7FC47222E84EB00E37CA4 /* PhotoTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoTableViewCell.m; sourceTree = "<group>"; };
-		84D7FC4C222EC10300E37CA4 /* GridViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GridViewController.h; sourceTree = "<group>"; };
-		84D7FC4D222EC10300E37CA4 /* GridViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GridViewController.m; sourceTree = "<group>"; };
 		84D7FC55222EDE0600E37CA4 /* PhotoDetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoDetailsViewController.h; sourceTree = "<group>"; };
 		84D7FC56222EDE0600E37CA4 /* PhotoDetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoDetailsViewController.m; sourceTree = "<group>"; };
+		84E0F18D224535B100163780 /* SwipeInteractionController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwipeInteractionController.h; sourceTree = "<group>"; };
+		84E0F18E224535B100163780 /* SwipeInteractionController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwipeInteractionController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,36 +107,76 @@
 		84D2D385222052FB004FB21B /* FlickrFotoApp */ = {
 			isa = PBXGroup;
 			children = (
-				84D2D386222052FB004FB21B /* AppDelegate.h */,
-				84D2D387222052FB004FB21B /* AppDelegate.m */,
-				84077A30222991A800E8192C /* MenuViewController.h */,
-				84077A31222991A800E8192C /* MenuViewController.m */,
-				84D7FC4C222EC10300E37CA4 /* GridViewController.h */,
-				84D7FC4D222EC10300E37CA4 /* GridViewController.m */,
-				84A86FE9222BEAD4008762EA /* ListViewController.h */,
-				84A86FEA222BEAD4008762EA /* ListViewController.m */,
-				84D7FC55222EDE0600E37CA4 /* PhotoDetailsViewController.h */,
-				84D7FC56222EDE0600E37CA4 /* PhotoDetailsViewController.m */,
-				84D7FC46222E84EB00E37CA4 /* PhotoTableViewCell.h */,
-				84D7FC47222E84EB00E37CA4 /* PhotoTableViewCell.m */,
-				848C557A222F2626000216FF /* PhotoCollectionViewCell.h */,
-				848C557B222F2626000216FF /* PhotoCollectionViewCell.m */,
-				84D2D39C22205341004FB21B /* APIHelpers.h */,
-				84D2D39D22205341004FB21B /* APIHelpers.m */,
+				84E0F1892244E36C00163780 /* Controllers */,
+				84E0F18A2244E39300163780 /* Views */,
+				84E0F18C2244E3DA00163780 /* Helpers */,
+				84E0F1882244E2E400163780 /* Categories */,
+				84E0F18B2244E3B000163780 /* Resources */,
+			);
+			path = FlickrFotoApp;
+			sourceTree = "<group>";
+		};
+		84E0F1882244E2E400163780 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
 				84A86FE6222BDE50008762EA /* UIColor+ThemeColors.h */,
 				84A86FE7222BDE50008762EA /* UIColor+ThemeColors.m */,
 				84077A332229936000E8192C /* UIView+AutoLayoutSupport.h */,
 				84077A342229936000E8192C /* UIView+AutoLayoutSupport.m */,
 				84A86FED222C2E1C008762EA /* UIView+Elevation.h */,
 				84A86FEC222C2E1C008762EA /* UIView+Elevation.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		84E0F1892244E36C00163780 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				84A86FE9222BEAD4008762EA /* RootViewController.h */,
+				84A86FEA222BEAD4008762EA /* RootViewController.m */,
+				84077A30222991A800E8192C /* MenuViewController.h */,
+				84077A31222991A800E8192C /* MenuViewController.m */,
+				84D7FC55222EDE0600E37CA4 /* PhotoDetailsViewController.h */,
+				84D7FC56222EDE0600E37CA4 /* PhotoDetailsViewController.m */,
+				84E0F18D224535B100163780 /* SwipeInteractionController.h */,
+				84E0F18E224535B100163780 /* SwipeInteractionController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		84E0F18A2244E39300163780 /* Views */ = {
+			isa = PBXGroup;
+			children = (
 				84A8701D222DA213008762EA /* URLImage.h */,
 				84A8701E222DA213008762EA /* URLImage.m */,
+				84D7FC46222E84EB00E37CA4 /* PhotoTableViewCell.h */,
+				84D7FC47222E84EB00E37CA4 /* PhotoTableViewCell.m */,
+				848C557A222F2626000216FF /* PhotoCollectionViewCell.h */,
+				848C557B222F2626000216FF /* PhotoCollectionViewCell.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		84E0F18B2244E3B000163780 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				84D2D394222052FC004FB21B /* Info.plist */,
+				84D2D386222052FB004FB21B /* AppDelegate.h */,
+				84D2D387222052FB004FB21B /* AppDelegate.m */,
 				84D2D38F222052FC004FB21B /* Assets.xcassets */,
 				84D2D391222052FC004FB21B /* LaunchScreen.storyboard */,
-				84D2D394222052FC004FB21B /* Info.plist */,
 				84D2D395222052FC004FB21B /* main.m */,
 			);
-			path = FlickrFotoApp;
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		84E0F18C2244E3DA00163780 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				84D2D39C22205341004FB21B /* APIHelpers.h */,
+				84D2D39D22205341004FB21B /* APIHelpers.m */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,16 +251,16 @@
 			files = (
 				84D7FC48222E84EB00E37CA4 /* PhotoTableViewCell.m in Sources */,
 				848C557C222F2626000216FF /* PhotoCollectionViewCell.m in Sources */,
+				84E0F18F224535B100163780 /* SwipeInteractionController.m in Sources */,
 				84D2D39E22205342004FB21B /* APIHelpers.m in Sources */,
 				84D7FC57222EDE0600E37CA4 /* PhotoDetailsViewController.m in Sources */,
 				84A86FEE222C2E1C008762EA /* UIView+Elevation.m in Sources */,
 				84077A352229936000E8192C /* UIView+AutoLayoutSupport.m in Sources */,
 				84A8701F222DA213008762EA /* URLImage.m in Sources */,
-				84A86FEB222BEAD4008762EA /* ListViewController.m in Sources */,
+				84A86FEB222BEAD4008762EA /* RootViewController.m in Sources */,
 				84D2D396222052FC004FB21B /* main.m in Sources */,
 				84D2D388222052FB004FB21B /* AppDelegate.m in Sources */,
 				84A86FE8222BDE50008762EA /* UIColor+ThemeColors.m in Sources */,
-				84D7FC4E222EC10300E37CA4 /* GridViewController.m in Sources */,
 				84077A32222991A800E8192C /* MenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

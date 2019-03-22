@@ -36,6 +36,8 @@ typedef NS_ENUM(NSInteger, LayoutDimension) {
 
 - (void)addSubview:(UIView *)subview pinToXPosition:(LayoutPosition)xPosition withDistance:(CGFloat)xSpace pinToYPosition:(LayoutPosition)yPosition withDistance:(CGFloat)ySpace;
 
+- (void)pinToPosition:(LayoutPosition)layoutPosition inDimension:(LayoutDimension)layoutDimension withLeadingDistance:(CGFloat)leading trailingDistance:(CGFloat)trailing;
+
 @end
 
 NS_ASSUME_NONNULL_END

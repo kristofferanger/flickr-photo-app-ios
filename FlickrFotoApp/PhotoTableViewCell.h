@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) UILabel *titleLabel;
 @property (nonatomic, strong) UILabel *detailsLabel;
 @property (nonatomic, strong) UIImageView *photoView;
+@property (nonatomic, strong) UIActivityIndicatorView *spinner;
 
 @property (nonatomic, weak) NSURLSessionDataTask *imageDataTask;
 @end

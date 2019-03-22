@@ -12,7 +12,7 @@
 #import "UIColor+ThemeColors.h"
 #import "URLImage.h"
 
-#define DEFAULT_MARGIN 20.0f
+#define DEFAULT_MARGIN 15.f
 
 @interface PhotoDetailsViewController () <UIScrollViewDelegate>
 
@@ -37,18 +37,10 @@
     return self;
 }
 
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self createLayout];
     [self fetchUserData];
-    
-    self.spinner = [[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
-    self.spinner.tintColor = [UIColor lightGrayColor];
-    self.spinner.center = CGPointMake(self.view.bounds.size.width/2, self.view.bounds.size.height/2);
-    [self.spinner startAnimating];
-    [self.view addSubview:self.spinner];
-    
 }
 
 - (void)createLayout {
@@ -69,15 +61,21 @@
     verticalStackView.distribution = UIStackViewDistributionFill;
     verticalStackView.axis = UILayoutConstraintAxisVertical;
     verticalStackView.spacing = DEFAULT_MARGIN;
+    [self.view addSubview:verticalStackView pinToXPosition:LayoutPositionEdgeToEdge withDistance:DEFAULT_MARGIN pinToYPosition:LayoutPositionEdgeToEdge withDistance:DEFAULT_MARGIN];
     
-    [self.view addSubview:verticalStackView pinToXPosition:LayoutPositionEdgeToEdge withDistance:DEFAULT_MARGIN pinToYPosition:LayoutPositionEdgeToEdge withDistance:DEFAULT_MARGIN*2];
+    _spinner = [[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    self.spinner.tintColor = [UIColor blackColor];
+    self.spinner.center = CGPointMake(self.view.bounds.size.width/2, self.view.bounds.size.height/2);
+    [self.spinner startAnimating];
+    [self.view addSubview:self.spinner];
 }
 
 - (void)updateLayoutWithUserName:(NSString *)userName andDate:(NSString *)dateString {
     
+    // set title
     self.title = [@"@" stringByAppendingString:userName ?: @" ..."];
     
-    // set other labels
+    // set labels
     self.titleLabel.text = [self.photoInfo objectForKey:@"title"];
     self.dateLabel.text = dateString;
     

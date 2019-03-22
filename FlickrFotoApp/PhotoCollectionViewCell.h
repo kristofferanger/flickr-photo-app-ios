@@ -13,6 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface PhotoCollectionViewCell : UICollectionViewCell
 
 @property (nonatomic, weak) NSURLSessionDataTask *imageDataTask;
+@property (nonatomic, strong) UIImageView *photoView;
+
 
 @end
 

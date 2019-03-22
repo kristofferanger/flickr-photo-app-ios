@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface URLImage : NSObject
 
-+ (NSURLSessionDataTask *)imageURL:(NSString *)imageURL withCompletion:(void (^)(UIImage *image, NSError *error))completion;
++ (nullable NSURLSessionDataTask *)imageURL:(NSString *)imageURL withCompletion:(void (^)(UIImage *image, NSError *error))completion;
 
 @end
 
