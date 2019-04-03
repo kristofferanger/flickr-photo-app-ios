@@ -26,6 +26,9 @@
     [subview pinToXPosition:xPosition withDistance:xSpace pinToYPosition:yPosition withDistance:ySpace];
 }
 
+- (void)pinToEdges {
+    [self pinToXPosition:LayoutPositionEdgeToEdge withDistance:0 pinToYPosition:LayoutPositionEdgeToEdge withDistance:0];
+}
 
 - (void)pinToXPosition:(LayoutPosition)xPosition withDistance:(CGFloat)xSpace pinToYPosition:(LayoutPosition)yPosition withDistance:(CGFloat)ySpace {
 

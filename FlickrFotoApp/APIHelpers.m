@@ -11,7 +11,7 @@
 #define API_KEY @"64842cd5f58a03561edfa18c7c64d39c"
 #define SECRET_KEY @"23de61ed41e30817"
 #define BASE_URL @"api.flickr.com/services/rest"
-#define TIMEOUT 15.0f
+#define TIMEOUT 20.0f
 
 @implementation APIHelpers
 

@@ -11,13 +11,40 @@
 #import "UIColor+ThemeColors.h"
 #import "UIView+AutoLayoutSupport.h"
 
+#define WHY_NOT YES
+#define GOLDEN_RATIO ((1 + sqrt(5))/2.f)
+#define MENU_WIDTH 240.f
+#define ANIMATION_DURATION 0.25f
+
 @interface MenuViewController ()
 
+// private properties
 @property (nonatomic, strong) NSArray *buttons;
+@property (nonatomic, strong) UIViewPropertyAnimator *animator;
+
+// readonly calculated properties
+@property (nonatomic, readonly) PhotoViewController *photoViewController;
+@property (nonatomic, readonly) UINavigationController *navigationContainer;
+@property (readonly) BOOL isOpen;
+
 @end
 
 @implementation MenuViewController
 
+#pragma mark - Getters / setters
+
+- (PhotoViewController *)photoViewController {
+    PhotoViewController *root = self.navigationContainer.viewControllers.firstObject;
+    return root;
+}
+
+- (UINavigationController *)navigationContainer {
+    return self.childViewControllers.firstObject;
+}
+
+- (BOOL)isOpen {
+    return self.navigationContainer.view.frame.origin.x != 0;
+}
 
 #pragma mark - Override methods
 
@@ -31,7 +58,7 @@
 }
 
 - (BOOL)shouldAutorotate {
-    return NO;
+    return WHY_NOT;
 }
 
 - (void)viewDidLoad {
@@ -50,7 +77,7 @@
     stackView.distribution = UIStackViewDistributionEqualSpacing;
     stackView.axis = UILayoutConstraintAxisVertical;
     stackView.spacing = 30;
-    [self.view addSubview:stackView pinToXPosition:LayoutPositionLeft withDistance:30 pinToYPosition:LayoutPositionTop withDistance:60];
+    [self.view addSubview:stackView pinToXPosition:LayoutPositionLeft withDistance:30 pinToYPosition:LayoutPositionTop withDistance:50];
     
     for (NSDictionary *buttonInfo in self.buttons) {
         
@@ -65,18 +92,82 @@
     }
 }
 
+- (UIViewPropertyAnimator *)menuAnimatorToPoint:(CGPoint)point {
+
+    UIView *blurView = [[UIView alloc]initWithFrame:CGRectZero];
+    blurView.backgroundColor = [UIColor colorWithWhite:0 alpha:1/GOLDEN_RATIO];
+    blurView.alpha = point.x == 0 ? 0 : 1;
+    [self.view insertSubview:blurView belowSubview:self.navigationContainer.view];
+    [blurView pinToEdges];
+    
+    UIViewPropertyAnimator *menuAnimator = [[UIViewPropertyAnimator alloc]initWithDuration:ANIMATION_DURATION curve:UIViewAnimationCurveEaseOut animations:^{
+
+        CGRect navigationContainerFrame = self.navigationContainer.view.frame;
+        navigationContainerFrame.origin = point;
+        self.navigationContainer.view.frame = navigationContainerFrame;
+        blurView.alpha = point.x == 0 ? 1 :0;
+    }];
+    [menuAnimator addCompletion:^(UIViewAnimatingPosition finalPosition) {
+        self.photoViewController.coverView.hidden = !self.isOpen;
+        [blurView removeFromSuperview];
+    }];
+    return menuAnimator;
+}
+
+- (void)interactiveMenuAnimatorWithPanGesture:(UIPanGestureRecognizer *)gesture toPoint:(CGPoint)point {
+    
+    // calculate progression
+    CGPoint translation = [gesture translationInView:self.view];
+    CGFloat direction = CGPointEqualToPoint(CGPointZero, point) ? -1 : 1;
+    CGFloat fractionComplete = translation.x * direction / MENU_WIDTH;
+    
+    // handle gesture
+    switch (gesture.state) {
+            
+        case UIGestureRecognizerStateBegan:{
+            self.animator = [self menuAnimatorToPoint:point];
+            [self.animator pauseAnimation];
+            break;
+        }
+        case UIGestureRecognizerStateChanged:{
+            [self.animator setFractionComplete:fractionComplete];
+            break;
+        }
+        case UIGestureRecognizerStateEnded: {
+            self.animator.reversed = fractionComplete < 1 - 1/GOLDEN_RATIO;
+            [self.animator continueAnimationWithTimingParameters:nil durationFactor:0];
+            break;
+        }
+        default: {
+            break;
+        }
+    }
+}
+
 #pragma mark - Action methods
 
 - (void)buttonPressed:(UIButton *)button {
     
-    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
-    
     NSDictionary *buttonInfo = [[self.buttons filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"%K == %@", @"button_title", button.currentTitle]]firstObject];
-    
-    if ([self.delegate respondsToSelector:@selector(menuViewController:dismissedWithSelectedInfo:)]) {
-        [self.delegate menuViewController:self dismissedWithSelectedInfo:buttonInfo];
-    }
+    self.photoViewController.style = (LayoutStyle)[[buttonInfo objectForKey:@"style"] integerValue];
+    [self toggleMenuPage];
 }
+
+#pragma mark - PhotoViewControllerDelegate methods
+
+- (void)handleOpenMenuPanGesture:(UIPanGestureRecognizer *)gesture {
+    [self interactiveMenuAnimatorWithPanGesture:gesture toPoint:CGPointMake(MENU_WIDTH, 0)];
+}
+
+- (void)handleCloseMenuPanGesture:(UIPanGestureRecognizer *)gesture {
+    [self interactiveMenuAnimatorWithPanGesture:gesture toPoint:CGPointZero];
+}
+
+- (void)toggleMenuPage {
+    self.animator = [self menuAnimatorToPoint:self.isOpen ? CGPointZero : CGPointMake(MENU_WIDTH, 0)];
+    [self.animator startAnimation];
+}
+
 
 
 @end
