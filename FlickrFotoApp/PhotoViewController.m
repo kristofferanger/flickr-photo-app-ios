@@ -39,7 +39,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = @"Nature on Flickr";
+    self.title = @"SpaceX on Flickr";
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"ic_menu_36pt"] style:UIBarButtonItemStyleDone target:self action:@selector(showMenu:)];
     
@@ -67,7 +67,7 @@
 #pragma mark - API methods
 
 - (void)fetchData {
-    [APIHelpers makeRequestWithEndpoint:@"/" queryParameters:@{@"method":@"flickr.photos.search", @"tags":@"nature"} completion:^(NSDictionary * _Nonnull response) {
+    [APIHelpers makeRequestWithEndpoint:@"/" queryParameters:@{@"method":@"flickr.photos.search", @"tags":@"spacex", @"license": @"1"} completion:^(NSDictionary * _Nonnull response) {
         NSError *error = [response objectForKey:@"error"];
         if (error == nil) {
             NSArray *photos = [[response objectForKey:@"result"] valueForKeyPath:@"photos.photo"];

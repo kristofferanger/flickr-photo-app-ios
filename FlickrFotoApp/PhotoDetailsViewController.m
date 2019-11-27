@@ -68,6 +68,8 @@
     self.spinner.center = CGPointMake(self.view.bounds.size.width/2, self.view.bounds.size.height/2);
     [self.spinner startAnimating];
     [self.view addSubview:self.spinner];
+    
+    
 }
 
 - (void)updateLayoutWithUserName:(NSString *)userName andDate:(NSString *)dateString {
